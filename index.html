@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="pics/images.png" type="image/x-icon">
+    <title>TicTacToe</title>
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+
+        #h1::after {
+            content: "";
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+            background: rgb(255, 179, 0);
+            width: 0%;
+            height: 4px;
+            border-radius: 6px;
+            transition: 0.5s;
+        }
+
+        #h1:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-900">
+    <div class="flex justify-center items-center w-screen h-screen flex-col">
+        <div class="flex justify-center items-center mb-20 ">
+            <h1 id="h1" class="text-5xl text-yellow-500 font-semibold text-center cursor-pointer">Tic - Tac - Toe</h1>
+        </div>
+        <div class="flex justify-center items-center w-screen">
+            <div class="flex justify-center items-center flex-col gap-4 p-2">
+                <div id="box1" onclick="afterClicking1()"
+                    class="border w-24 h-24 bg-white rounded-md shadow-2xl text-purple-300 text-8xl text-center font-semibold transition-all cursor-pointer hover:bg-slate-200">
+                </div>
+                <div id="box2" onclick="afterClicking2()"
+                    class="border w-24 h-24 bg-white rounded-md shadow-2xl text-purple-300 text-8xl text-center font-semibold transition-all cursor-pointer hover:bg-slate-200">
+                </div>
+                <div id="box3" onclick="afterClicking3()"
+                    class="border w-24 h-24 bg-white rounded-md shadow-2xl text-purple-300 text-8xl text-center font-semibold transition-all cursor-pointer hover:bg-slate-200">
+                </div>
+            </div>
+            <div class="flex justify-center items-center flex-col gap-4 p-2">
+                <div id="box4" onclick="afterClicking4()"
+                    class="border w-24 h-24 bg-white rounded-md shadow-2xl text-purple-300 text-8xl text-center font-semibold transition-all cursor-pointer hover:bg-slate-200">
+                </div>
+                <div id="box5" onclick="afterClicking5()"
+                    class="border w-24 h-24 bg-white rounded-md shadow-2xl text-purple-300 text-8xl text-center font-semibold transition-all cursor-pointer hover:bg-slate-200">
+                </div>
+                <div id="box6" onclick="afterClicking6()"
+                    class="border w-24 h-24 bg-white rounded-md shadow-2xl text-purple-300 text-8xl text-center font-semibold transition-all cursor-pointer hover:bg-slate-200">
+                </div>
+            </div>
+            <div class="flex justify-center items-center flex-col gap-4 p-2">
+                <div id="box7" onclick="afterClicking7()"
+                    class="border w-24 h-24 bg-white rounded-md shadow-2xl text-purple-300 text-8xl text-center font-semibold transition-all cursor-pointer hover:bg-slate-200">
+                </div>
+                <div id="box8" onclick="afterClicking8()"
+                    class="border w-24 h-24 bg-white rounded-md shadow-2xl text-purple-300 text-8xl text-center font-semibold transition-all cursor-pointer hover:bg-slate-200">
+                </div>
+                <div id="box9" onclick="afterClicking9()"
+                    class="border w-24 h-24 bg-white rounded-md shadow-2xl text-purple-300 text-8xl text-center font-semibold transition-all cursor-pointer hover:bg-slate-200">
+                </div>
+            </div>
+        </div>
+        <div class="mt-20">
+            <button onclick="reset()"
+                class="border border-black rounded-md py-4 px-7 w-36 h-14 bg-yellow-400 text-black font-medium text-lg text-center transition-all shadow-xl hover:bg-yellow-500">Reset</button>
+        </div>
+        <div class="mt-32">
+            <h4 id="winner" class="text-4xl text-yellow-400 font-light"></h4>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
